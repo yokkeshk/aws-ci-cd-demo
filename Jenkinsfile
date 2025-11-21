@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/YOUR_GITHUB_USERNAME/aws-ci-cd-demo.git'
+                    git branch: 'main', url: 'https://github.com/yokkeshk/aws-ci-cd-demo.git'
             }
         }
 
