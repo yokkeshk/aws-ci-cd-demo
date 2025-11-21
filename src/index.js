@@ -1,11 +1,21 @@
-const express = require('express');
+const express = require("express");
 const app = express();
-const port = 3000;
+const PORT = 3000;
 
-app.get('/', (req, res) => {
-  res.send('Hello from CI/CD pipeline on AWS with Jenkins & Docker!');
+app.get("/", (req, res) => {
+    res.send(`
+        <h1 style="font-family: Arial; color: green;">
+            🚀 CI/CD Pipeline Working Successfully!
+        </h1>
+        <p style="font-size: 18px;">
+            Your Node.js application has been automatically deployed using Jenkins, Docker, and AWS EC2.
+        </p>
+        <p style="font-weight: bold; color: #333;">
+            Last updated: ${new Date().toLocaleString()}
+        </p>
+    `);
 });
 
-app.listen(port, () => {
-  console.log(`App listening on port ${port}`);
+app.listen(PORT, () => {
+    console.log(\`Server running on port \${PORT}\`);
 });
